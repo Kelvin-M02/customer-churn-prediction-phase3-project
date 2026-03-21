@@ -34,6 +34,8 @@ The target variable is **churn (binary classification)**.
 
 ### 1. Target Variable Distribution - Churn
 
+<img src="images\Target_Variable_Distribution.png" width="600">
+
 ![Churn Distribution](images\Target_Variable_Distribution.png)
 
 The dataset shows a class imbalance, with most customers not churning.
