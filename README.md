@@ -32,7 +32,23 @@ The target variable is **churn (binary classification)**.
 
 ## Exploratory Data Analysis (EDA)
 
-Key findings:
+### 1. Target Variable Distribution - Churn
+
+![Churn Distribution](images\Target_Variable_Distribution.png)
+
+The dataset shows a class imbalance, with most customers not churning.
+
+### 2. Churn Rate by State
+![Churn Rate](images\Churn_Rate_by_State.png)
+
+States in the top such as **NJ, CA, TX, MD, SC, MI, MS, NV, WA, and ME** have the highest proportion of churned customers and are priority for retention action.
+
+### 3. International Plan VS Churn
+![International Plan](images\International_Plan_vs_Churn.png)
+
+Customers with an international plan are more likely to churn maybe due to higher costs, dissatisfaction or unmet usage needs.
+
+**Key findings:**
 
 - Customers with **4+ customer service calls** are significantly more likely to churn  
 - Customers with an **international plan** show higher churn rates  
@@ -44,12 +60,21 @@ Key findings:
 
 ## Modeling
 
-### Baseline Model: Logistic Regression - Focus on Class 1
+### Baseline Model: Logistic Regression
+Below is the evaluation of the baseline logistic model. Our main focus metric will be **recall**, this is in mind with the variable we are trying to predict **'Churn'**.
+
+![Model Evaluation](images\Evaluation_of_Baseline_Logistic_Model.png)
+
+#### Focus on Class 1
 - Accuracy: **[0.87]**
 - Recall: **[0.23]**
 - Precision: **[0.66]**
 
 ### Tuned Model: [Tuned Logistic Regression Model] - Focus on Class 1
+Below is the evaluation of the Tuned logistic model after **handling class imbalance using SMOTE**.
+
+![Tuned Model Evaluation](images\Evaluation_of_Tuned_Logistic_Model.png)
+ 
 - Accuracy: **[0.75]**
 - Recall: **[0.70]**
 - Precision: **[0.33]**
